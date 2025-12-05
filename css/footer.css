@@ -1,0 +1,8 @@
+footer{
+  background-color: var(--green);
+  .wrapper{
+    color:var(--white);
+    display: flex;
+    justify-content: space-between;
+  }
+}

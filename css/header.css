@@ -1,0 +1,132 @@
+:root {
+  --header-height: 80px;
+}
+
+
+
+header{
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  grid-template-columns: 1fr 5fr;
+  background-color: var(--green);
+  z-index: 10;
+
+  .logoContainer{
+    padding: 5px;
+    border-radius: 5px;
+    width: 80px;
+    margin-left: 10px;
+    height: calc(var(--header-height) - 30px) ;
+    display: grid;
+    place-items: center;
+    background-color: #FFFFFF;
+
+    img{
+
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+
+  .menu{
+    z-index: -1;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    transition: transform 400ms ease-in-out;
+    border-radius:0 0 0 10px;
+    background-color: var(--green);
+}
+
+
+
+
+
+  .nav-link{
+    display:block;
+    position: relative;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 5px;
+
+    &::before{
+      content: "";
+      position: absolute;
+      border-radius: 5px;
+      opacity: 0.2;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: green;
+      bottom: 0;
+      left: 0;
+      transition: transform 200ms ease-in-out;
+      transform-origin: bottom;
+      transform: scaleY(0);
+
+
+    }
+    &:hover::before{
+transform: scaleY(1);
+    }
+  }
+}
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 8px 0 var(--black);
+  background-color: var(--white);
+  cursor: pointer;
+  span{
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: var(--black);
+
+  }
+
+}
+#burgerCheckbox {
+  display: none;
+}
+#burgerCheckbox:checked ~ .menu{
+  visibility: visible;
+
+  transform: translateY(calc(var(--header-height) + 100%));
+}
+
+@media screen and (min-width: 900px) {
+  header{
+    .hamburger{
+      display: none;
+    }
+    .menu{
+      position: static;
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+    }
+
+
+  }
+
+}

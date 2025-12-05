@@ -1,0 +1,36 @@
+form{
+  display: grid;
+  gap: 10px;
+  input[type], select{
+  height: 25px;
+}
+}
+
+fieldset{
+  display: grid;
+  margin: 0 10px;
+  border-radius: 5px;
+  &:nth-child(2), &:nth-child(3) {
+    grid-template-columns: 1rem 1fr;
+    align-items: center;
+    gap: 0 1rem;
+  }
+}
+
+
+@media screen and (min-width: 768px ){
+  form{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  fieldset{
+    &:first-child, &:last-child {
+      grid-template-columns: 100px auto;
+      gap: 10px;
+    }
+  }
+  .info{
+    grid-column: 1 / 3;
+  }
+
+}

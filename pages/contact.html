@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Afpa Contact</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/color.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+<header>
+
+  <a href="index.html" title="retour à la page d'acceuil">
+    <div class="logoContainer">
+      <img src="/pictures/logos/logo.jpeg" alt="logo afpa">
+    </div>
+  </a>
+  <input type="checkbox" id="burgerCheckbox">
+  <label for="burgerCheckbox" class="hamburger">
+    <span></span><span></span><span></span>
+
+  </label>
+
+  <nav class="menu">
+    <a href="../index.html"  class="nav-link">Acceuil</a>
+    <a href="training.html" class="nav-link" >Formation</a>
+    <a href="testimony.html" class="nav-link">Témoignages</a>
+    <a href="reference.html" class="nav-link">Nos réferences</a>
+    <a href="contact.html" aria-current="page" class="nav-link">Contactez-nous</a>
+  </nav>
+</header>
+<main>
+  <div class="wrapper">
+    <h1>Contactez-nous</h1>
+    <form action="#" method="post" class="contactForm">
+      <fieldset>
+        <legend>Identité</legend>
+        <label for="name">Nom*:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Adresse mail*</label>
+        <input type="email" id="email" name="email" required>
+        <label for="tel">Numero de téléphone : </label>
+        <input type="tel" id="tel" name="tel" >
+        <em class="info">* information obligatoire</em>
+      </fieldset>
+      <fieldset>
+        <legend>Votre situation</legend>
+        <input type="radio" id="demandeur" name="situation" value="Demandeur d'emploi">
+        <label for="demandeur">Demandeur d'emploi</label>
+        <input type="radio" id="salarié" name="situation" value="salarié">
+        <label for="salarié">Salarié en transition professionnelle,</label>
+        <input type="radio", id="autre" name="situation" value="autre">
+        <label for="autre">Autre</label>
+      </fieldset>
+      <fieldset>
+        <legend>Vos modalités d'apprentissage privilégiées</legend>
+
+        <input type="radio" id="centre" name="modalité" value="centre">
+        <label for="centre">En centre de formation (presentiel)</label>
+        <input type="radio" id="distance" name="modalité" value="distance">
+        <label for="distance">100 % à distance</label>
+        <input type="radio", id="alternance" name="modalité" value="alternance">
+        <label for="alternance">En contrat d'alternance avec l'entreprise</label>
+        <input type="radio", id="sp" name="modalité" value="sp">
+        <label for="sp">Sans préference</label>
+      </fieldset>
+      <fieldset>
+        <legend>Votre region d'origine</legend>
+        <label for="region">Région</label>
+        <select id="region" name="region">
+          <option value="" selected>— Sélectionnez une région —</option>
+          <optgroup label="Métropole">
+            <option value="auvergne-rhone-alpes">Auvergne-Rhône-Alpes</option>
+            <option value="bourgogne-franche-comte">Bourgogne-Franche-Comté</option>
+            <option value="bretagne">Bretagne</option>
+            <option value="centre-val-de-loire">Centre-Val de Loire</option>
+            <option value="corse">Corse</option>
+            <option value="grand-est">Grand Est</option>
+            <option value="hauts-de-france">Hauts-de-France</option>
+            <option value="ile-de-france">Île-de-France</option>
+            <option value="normandie">Normandie</option>
+            <option value="nouvelle-aquitaine">Nouvelle-Aquitaine</option>
+            <option value="occitanie">Occitanie</option>
+            <option value="pays-de-la-loire">Pays de la Loire</option>
+            <option value="provence-alpes-cote-d-azur">Provence-Alpes-Côte d’Azur</option>
+          </optgroup>
+          <optgroup label="Outre-mer">
+            <option value="guadeloupe">Guadeloupe</option>
+            <option value="martinique">Martinique</option>
+            <option value="guyane">Guyane</option>
+            <option value="la-reunion">La Réunion</option>
+            <option value="mayotte">Mayotte</option>
+          </optgroup>
+        </select>
+      </fieldset>
+    </form>
+  </div>
+
+</main>
+<footer></footer>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+:root{
+  /*Code Pantone*/
+  --368C: rgb(120,190,32);
+  --violet: rgb(68,0,153);
+  --279C: rgb(65,143,222);
+  --1795C: rgb(210,38,48);
+  --1915C: rgb(239,74,129);
+  --172C: rgb(250,70,22);
+  --321C: rgb(0,140,149);
+  --109C: rgb(255,209,0);
+  --5425C: rgb(122,153,172);
+
+
+  /*Code Pantone to text*/
+  --green: var(--368C);
+  --blue279:var(--279C);
+  --blue321: var(--321C);
+  --red: var(--1795C);
+  --pink: var(--1915C);
+  --orange: var(--172C);
+  --yellow: var(--109C);
+  --cyan: var(--5425C);
+  --black: #333;
+  --white: #F1F1F1;
+  --box-shadow: 5px 5px 10px var(--black);
+  }

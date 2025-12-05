@@ -1,0 +1,36 @@
+.logos-grid{
+
+  display: grid;
+  text-align: center;
+  .imgContainer{
+    width: 90px;
+    height: 90px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
+
+@media screen and (width > 500px){
+  .logos-grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+@media screen and (width > 800px){
+  .logos-grid{
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+@media screen and (width > 1000px){
+  .logos-grid{
+    grid-template-columns:repeat(4, 1fr);
+  }
+}
+@media screen and (width > 1400px){
+  .logos-grid{
+    grid-template-columns:repeat(5, 1fr);
+  }
+}
