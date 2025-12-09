@@ -1,49 +1,322 @@
-.mainContainer{
+/* ==========================================
+   INDEX.HTML - PAGE D'ACCUEIL
+   ========================================== */
+
+/* Main container */
+main {
+  min-height: calc(100vh - 200px);
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+
+.hero {
+  background: linear-gradient(135deg, var(--green, #78BE20) 0%, var(--blue321, #008C95) 100%);
+  padding: 60px 20px;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de particules en arrière-plan (optionnel) */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.mainContainer {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
 
-  width: 90%;
-  margin: 20px auto;
+/* Partie gauche - Image */
+.left {
+  position: relative;
+}
+
+.left img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  max-height: 500px;
+  transition: transform 0.3s ease;
+}
+
+.left img:hover {
+  transform: scale(1.02);
+}
+
+/* Bordure décorative autour de l'image */
+.left::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* Partie droite - Contenu */
+.right {
+  color: white;
   padding: 20px;
+}
 
-  color: var(--white);
-  background-color: rgba(128,128,128, 0.9);
-  border-radius: 5px;
-  box-shadow: var(--shadow);
+.right h1 {
+  font-family: 'Gotham', Arial, sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: slideInRight 0.8s ease-out;
+}
 
-  .left{
-    width: 100%;
-    height: 100%;
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 5px;
+.right h2 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 35px;
+  opacity: 0.95;
+  animation: slideInRight 1s ease-out;
+}
 
-    }
+/* Bouton CTA */
+.btn {
+  display: inline-block;
+  background: white;
+  color: var(--green, #78BE20);
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: slideInRight 1.2s ease-out;
+  border: 3px solid white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--blue321, #008C95);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
-  .right{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    h2{
-
-    }
-    .btn{
-      justify-content: center;
-      text-align: center;
-      align-self: flex-end;
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+/* ==========================================
+   SECTIONS SUPPLÉMENTAIRES (si nécessaire)
+   ========================================== */
 
+/* Section informations */
+.info-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
 
-@media screen and (min-width: 900px){
-  .mainContainer{
-    grid-template-columns: 1fr 1fr;
+.info-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-section h2 {
+  text-align: center;
+  color: var(--green, #78BE20);
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+/* Grille d'informations */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.info-card i {
+  font-size: 3rem;
+  color: var(--green, #78BE20);
+  margin-bottom: 20px;
+}
+
+.info-card h3 {
+  color: var(--blue321, #008C95);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLETTE
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+  .mainContainer {
+    gap: 40px;
+  }
+
+  .right h1 {
+    font-size: 2.5rem;
+  }
+
+  .right h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+    min-height: auto;
+  }
+
+  .mainContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Inverser l'ordre sur mobile : texte d'abord, puis image */
+  .left {
+    order: 2;
+  }
+
+  .right {
+    order: 1;
+    padding: 0;
+    text-align: center;
+  }
+
+  .left img {
+    max-height: 350px;
+  }
+
+  .left::before {
+    display: none;
+  }
+
+  .right h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .right h2 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  .info-section {
+    padding: 50px 15px;
+  }
+
+  .info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .right h1 {
+    font-size: 1.75rem;
+  }
+
+  .right h2 {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .left img {
+    max-height: 250px;
   }
 }

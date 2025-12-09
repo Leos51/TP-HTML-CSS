@@ -1,0 +1,378 @@
+.training-hero {
+  background: linear-gradient(135deg, var(--green) 0%, var(--blue321) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+}
+
+.training-hero h1 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.training-hero .subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Training Overview */
+.training-overview {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.training-overview .wrapper {
+  display: grid;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.training-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.training-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.training-info {
+  display: grid;
+  gap: 20px;
+}
+
+.info-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.info-card h2 {
+  color: var(--green);
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.info-card h2 i {
+  margin-right: 10px;
+}
+
+.info-card p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card ul li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+.info-card ul li i {
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}
+
+/* Training Details */
+.training-details {
+  padding: 60px 20px;
+  background: var(--white);
+}
+
+.details-grid {
+  display: grid;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.detail-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.detail-card:hover {
+  border-color: var(--green);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--green) 0%, var(--blue321) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.detail-card h3 {
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.detail-card p {
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #495057;
+}
+
+.detail-card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.detail-card .net {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #6c757d;
+}
+
+.detail-card .small-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.badge.cpf {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+/* Training Program */
+.training-program {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section-title {
+  text-align: center;
+  color: var(--green);
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--blue321));
+  border-radius: 2px;
+}
+
+.program-columns {
+  display: grid;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border-left: 4px solid var(--green);
+}
+
+.program-card h3 {
+  color: var(--green);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.program-card h3 i {
+  margin-right: 10px;
+}
+
+.program-card h4 {
+  color: var(--blue321);
+  font-size: 1.3rem;
+  margin: 25px 0 15px;
+  font-weight: 600;
+}
+
+.program-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.program-card ul li {
+  padding: 12px 0;
+  padding-left: 35px;
+  position: relative;
+  line-height: 1.6;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.program-card ul li:last-child {
+  border-bottom: none;
+}
+
+.program-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.program-card p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #495057;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding: 40px 20px;
+}
+
+.btn-download {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--red) 100%);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--green) 0%, var(--blue321) 100%);
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+/* Stats Section */
+.stats-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--green) 0%, var(--blue321) 100%);
+  color: var(--white);
+}
+
+.stats-section .section-title {
+  color: var(--white);
+}
+
+.stats-section .section-title::after {
+  background: var(--white);
+}
+
+.stats-grid {
+  display: grid;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.stat-card {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  color: var(--white);
+  opacity: 0.95;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  .training-overview .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .training-image {
+    height: 100%;
+    min-height: 500px;
+  }
+
+  .program-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .details-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
